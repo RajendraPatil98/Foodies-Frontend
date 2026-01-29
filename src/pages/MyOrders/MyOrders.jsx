@@ -4,6 +4,7 @@ import { StoreContext } from "../../context/StoreContext";
 import { assets } from "../../assets/assets";
 import "./MyOrders.css";
 import axios from "axios";
+import { API_BASE_URL } from "../../util/constants";
 //import { fetchUserOrders } from "../../service/orderService";
 
 const MyOrders = () => {
@@ -14,7 +15,7 @@ const MyOrders = () => {
     //const response = await fetchUserOrders(token);
     //setData(response);
 
-    const response = await axios("http://localhost:8081/api/orders", {
+    const response = await axios(`${API_BASE_URL}/orders`, {
       headers: { Authorization: `Bearer ${token}` },
     });
     setData(response.data);
