@@ -1,6 +1,7 @@
 import axios from "axios";
+import { API_BASE_URL } from "../util/constants";
 
-const API_URL = "http://localhost:8081/api/orders";
+const API_URL = `${API_BASE_URL}/orders`;
 
 export const fetchUserOrders = async (token) => {
     try {

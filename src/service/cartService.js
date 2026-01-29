@@ -1,6 +1,7 @@
-import axios from "axios";  
+import axios from "axios";
+import { API_BASE_URL } from "../util/constants";
 
-const API_URL="http://localhost:8081/api/cart";
+const API_URL=`${API_BASE_URL}/cart`;
 
 export const addToCart=async(foodId, token)=>{
     try {
